@@ -7,6 +7,7 @@ project:
     - london-email.qmd
     - london-flyer.qmd
     - london-social.qmd
+    - london-whitepaper.qmd
 
 website:
   title: "Visit London"
@@ -34,3 +35,5 @@ website:
             href: london-flyer.pdf
           - text: "Social ad (PDF)"
             href: london-social.pdf
+          - text: "White paper (PDF)"
+            href: london-whitepaper.pdf

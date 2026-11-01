@@ -1,0 +1,36 @@
+project:
+  type: website
+  render:
+    - index.qmd
+    - london.qmd
+    - london-dashboard.qmd
+    - london-email.qmd
+    - london-flyer.qmd
+    - london-social.qmd
+
+website:
+  title: "Visit London"
+  navbar:
+    left:
+      - text: Guide
+        href: london.qmd
+      - text: Dashboard
+        href: london-dashboard.qmd
+      - text: Downloads
+        menu:
+          - text: "Guide (Word)"
+            href: london.docx
+          - text: "Guide (PDF)"
+            href: london.pdf
+          - text: "Guide (PowerPoint)"
+            href: london.pptx
+          - text: "Guide (ePub)"
+            href: london.epub
+          - text: "Guide (slides)"
+            href: london-slides.html
+          - text: "Partner brief (Word)"
+            href: london-email.docx
+          - text: "Flyer (A5 PDF)"
+            href: london-flyer.pdf
+          - text: "Social ad (PDF)"
+            href: london-social.pdf

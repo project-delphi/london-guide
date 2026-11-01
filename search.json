@@ -1,5 +1,54 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Visit London",
+    "section": "",
+    "text": "Welcome to the London Tourism Office’s visitor guide: one guide, written once and reused for every audience.\n\n📖 The guide: sights, getting around and the most visited attractions.\n📈 The dashboard: 2025 visits and Visit London’s churches.\n⬇️ Downloads (menu above): the guide as Word, PDF, PowerPoint, ePub and slides, the partner brief, the A5 flyer and the square social ad.\n\nVisit numbers: ALVA member attractions, retrieved 2026-10-30. Photo credits: images/ATTRIBUTION.md."
+  },
+  {
+    "objectID": "london-slides.html#london-in-numbers",
+    "href": "london-slides.html#london-in-numbers",
+    "title": "Visit London",
+    "section": "London in numbers",
+    "text": "London in numbers\nMost visited in 2025: the Natural History Museum (South Kensington), with 7,116,929 visits. London’s ten most visited ALVA member attractions drew 39,692,434 visits in 2025 (source: ALVA, Visits made in 2025, retrieved 2026-10-30).\n\n\nFigure 1: Visits in 2025 to London’s ten most visited ALVA member attractions. Source: ALVA, retrieved 2026-10-30."
+  },
+  {
+    "objectID": "london-slides.html#five-sights-to-start-with",
+    "href": "london-slides.html#five-sights-to-start-with",
+    "title": "Visit London",
+    "section": "Five sights to start with",
+    "text": "Five sights to start with\n\nBritish Museum\nNatural History Museum\nTate Modern\nNational Gallery\nTower of London"
+  },
+  {
+    "objectID": "london-slides.html#getting-around",
+    "href": "london-slides.html#getting-around",
+    "title": "Visit London",
+    "section": "Getting around",
+    "text": "Getting around\n\n🚇 Tube\n🚌 Bus\n🚲 Santander Cycles"
+  },
+  {
+    "objectID": "london-slides.html#plan-your-visit",
+    "href": "london-slides.html#plan-your-visit",
+    "title": "Visit London",
+    "section": "Plan your visit",
+    "text": "Plan your visit\nPlan your route with the TfL Journey Planner.\n\nBig Ben in the sun. Photo: John Dillenbeck, CC0, via Wikimedia Commons\nTip from a local: many of London’s big museums have free general admission. Booking a free timed ticket online can save you time in the queue."
+  },
+  {
+    "objectID": "london-slides.html#sights-at-a-glance",
+    "href": "london-slides.html#sights-at-a-glance",
+    "title": "Visit London",
+    "section": "Sights at a glance",
+    "text": "Sights at a glance\n\n\n\nPhoto\nSight\nArea\nPrice band\nNearest tube\nMore\n\n\n\n\n\nBritish Museum\nBloomsbury\nFree\nTottenham Court Road\nRead more\n\n\n\nNatural History Museum\nSouth Kensington\nFree\nSouth Kensington\nRead more\n\n\n\nTate Modern\nBankside\nFree\nSouthwark\nRead more\n\n\n\nNational Gallery\nTrafalgar Square\nFree\nCharing Cross\nRead more\n\n\n\nTower of London\nTower Hill\nPaid\nTower Hill\nRead more\n\n\n\n“Free” means free general admission; some special exhibitions charge.\nPhotos, via Wikimedia Commons: British Museum, Mike Peel (CC BY-SA 4.0); Natural History Museum, Julian Herzog (CC BY 4.0); Tate Modern and National Gallery, Diego Delso (CC BY-SA 4.0); Tower of London, Dietmar Rabich (CC BY-SA 4.0). Full credits: images/ATTRIBUTION.md."
+  },
+  {
+    "objectID": "london-slides.html#before-you-go",
+    "href": "london-slides.html#before-you-go",
+    "title": "Visit London",
+    "section": "Before you go",
+    "text": "Before you go\n[ ] Contactless card or Oyster card\n[ ] Free museum tickets booked\n[ ] Comfortable shoes and an umbrella"
+  },
+  {
     "objectID": "london.html",
     "href": "london.html",
     "title": "Visit London",
@@ -47,54 +96,5 @@
     "title": "Visit London",
     "section": "Before you go",
     "text": "Before you go\n[ ] Contactless card or Oyster card\n[ ] Free museum tickets booked\n[ ] Comfortable shoes and an umbrella"
-  },
-  {
-    "objectID": "london-slides.html#london-in-numbers",
-    "href": "london-slides.html#london-in-numbers",
-    "title": "Visit London",
-    "section": "London in numbers",
-    "text": "London in numbers\nMost visited in 2025: the Natural History Museum (South Kensington), with 7,116,929 visits. London’s ten most visited ALVA member attractions drew 39,692,434 visits in 2025 (source: ALVA, Visits made in 2025, retrieved 2026-10-30).\n\n\nFigure 1: Visits in 2025 to London’s ten most visited ALVA member attractions. Source: ALVA, retrieved 2026-10-30."
-  },
-  {
-    "objectID": "london-slides.html#five-sights-to-start-with",
-    "href": "london-slides.html#five-sights-to-start-with",
-    "title": "Visit London",
-    "section": "Five sights to start with",
-    "text": "Five sights to start with\n\nBritish Museum\nNatural History Museum\nTate Modern\nNational Gallery\nTower of London"
-  },
-  {
-    "objectID": "london-slides.html#getting-around",
-    "href": "london-slides.html#getting-around",
-    "title": "Visit London",
-    "section": "Getting around",
-    "text": "Getting around\n\n🚇 Tube\n🚌 Bus\n🚲 Santander Cycles"
-  },
-  {
-    "objectID": "london-slides.html#plan-your-visit",
-    "href": "london-slides.html#plan-your-visit",
-    "title": "Visit London",
-    "section": "Plan your visit",
-    "text": "Plan your visit\nPlan your route with the TfL Journey Planner.\n\nBig Ben in the sun. Photo: John Dillenbeck, CC0, via Wikimedia Commons\nTip from a local: many of London’s big museums have free general admission. Booking a free timed ticket online can save you time in the queue."
-  },
-  {
-    "objectID": "london-slides.html#sights-at-a-glance",
-    "href": "london-slides.html#sights-at-a-glance",
-    "title": "Visit London",
-    "section": "Sights at a glance",
-    "text": "Sights at a glance\n\n\n\nPhoto\nSight\nArea\nPrice band\nNearest tube\nMore\n\n\n\n\n\nBritish Museum\nBloomsbury\nFree\nTottenham Court Road\nRead more\n\n\n\nNatural History Museum\nSouth Kensington\nFree\nSouth Kensington\nRead more\n\n\n\nTate Modern\nBankside\nFree\nSouthwark\nRead more\n\n\n\nNational Gallery\nTrafalgar Square\nFree\nCharing Cross\nRead more\n\n\n\nTower of London\nTower Hill\nPaid\nTower Hill\nRead more\n\n\n\n“Free” means free general admission; some special exhibitions charge.\nPhotos, via Wikimedia Commons: British Museum, Mike Peel (CC BY-SA 4.0); Natural History Museum, Julian Herzog (CC BY 4.0); Tate Modern and National Gallery, Diego Delso (CC BY-SA 4.0); Tower of London, Dietmar Rabich (CC BY-SA 4.0). Full credits: images/ATTRIBUTION.md."
-  },
-  {
-    "objectID": "london-slides.html#before-you-go",
-    "href": "london-slides.html#before-you-go",
-    "title": "Visit London",
-    "section": "Before you go",
-    "text": "Before you go\n[ ] Contactless card or Oyster card\n[ ] Free museum tickets booked\n[ ] Comfortable shoes and an umbrella"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Visit London",
-    "section": "",
-    "text": "Welcome to the London Tourism Office’s visitor guide: one guide, written once and reused for every audience.\n\n📖 The guide: sights, getting around and the most visited attractions.\n📈 The dashboard: 2025 visits and Visit London’s churches.\n⬇️ Downloads (menu above): the guide as Word, PDF, PowerPoint, ePub and slides, the partner brief, the A5 flyer and the square social ad.\n\nVisit numbers: ALVA member attractions, retrieved 2026-10-30. Photo credits: images/ATTRIBUTION.md."
   }
 ]

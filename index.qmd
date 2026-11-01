@@ -2,13 +2,8 @@
 title: "Visit London"
 ---
 
-Welcome to the London Tourism Office's visitor guide: one guide, written once and reused
-for every audience.
+Welcome to the Visit London guide, written once and reused for every audience.
 
-- 📖 [The guide](london.qmd): sights, getting around and the most visited attractions.
-- 📈 [The dashboard](london-dashboard.qmd): 2025 visits and Visit London's churches.
-- ⬇️ Downloads (menu above): the guide as Word, PDF, PowerPoint, ePub and slides, the partner
-  brief, the A5 flyer and the square social ad.
-
-Visit numbers: ALVA member attractions, retrieved 2026-10-30. Photo credits:
-`images/ATTRIBUTION.md`.
+- 📖 [Read the guide](london.qmd)
+- 📊 [Explore the dashboard](london-dashboard.qmd)
+- ⬇️ Use the **Downloads** menu for the Word, PDF, PowerPoint, EPUB and slides versions.

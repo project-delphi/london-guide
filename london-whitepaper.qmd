@@ -1,106 +1,71 @@
 ---
-title: "Visits to London's leading attractions, 2015–2025"
-subtitle: "Pandemic loss, recovery and free admission among ALVA member attractions"
+title: "Visits to five London attractions in 2025 against 2019"
 author: "London Tourism Office"
 date: today
 abstract: |
-  We describe visits to five of London's leading ALVA member attractions from 2015 to 2025,
-  relative to 2019, and compare the ten most visited London members in 2025 by admission
-  type.
-  Visits collapsed in 2020–2021 and had largely recovered by 2025; free admission dominates
-  the 2025 top ten.
+  We compare 2025 visits with 2019 for five London attractions and summarise 2025 visits by admission type for ten ALVA member attractions. Visits are counted as reported by ALVA; the analysis is descriptive and does not establish causes.
 bibliography: references.bib
+fig-format: svg
 format:
   typst:
     papersize: a4
     mainfont: "New Computer Modern"
-    section-numbering: "1.1"
-    bibliographystyle: ieee
-execute:
-  echo: false
+    section-numbering: "1."
+    include-in-header:
+      text: |
+        #set bibliography(title: [References])
 ---
 
 ```{python}
+#| echo: false
 import pandas as pd
+import matplotlib.pyplot as plt
 
 visits = pd.read_csv("data/visits.csv")
-attractions = pd.read_csv("data/attractions.csv")
-wide = visits.pivot(index="year", columns="attraction", values="visits")
-index_2019 = wide / wide.loc[2019] * 100
-total = wide.sum(axis=1)
-recovery_total = f"{total.loc[2025] / total.loc[2019]:.0%}"
-low_year = int(total.idxmin())
-low_share = f"{total.min() / total.loc[2019]:.0%}"
-by_admission = (attractions.groupby("admission")["visits_2025"]
-                .agg(attractions="count", visits="sum").sort_values("visits", ascending=False))
-free_share = f"{by_admission.loc['Free (paid exhibitions)', 'visits'] / attractions['visits_2025'].sum():.0%}"
-n_free = int(by_admission.loc["Free (paid exhibitions)", "attractions"])
+att = pd.read_csv("data/attractions.csv")
+w = visits.pivot(index="attraction", columns="year", values="visits")
+ratio = (w[2025] / w[2019]).sort_values()
+tot19, tot25 = int(w[2019].sum()), int(w[2025].sum())
+att["group"] = att["admission"].str.replace(r" \(.*\)", "", regex=True)
+grp = att.groupby("group")["visits_2025"].agg(["count", "sum"])
 ```
 
 # Introduction
 
-Visitor numbers guide how a tourism office spends its effort. This paper uses the
-Association of Leading Visitor Attractions (ALVA) annual tables
-[@alva2015; @alva2019; @alva2025] to describe how visits to five of London's best-known
-attractions fell during the COVID-19 pandemic and recovered, and how the ten most visited
-London ALVA member attractions in 2025 differ by admission type.
+Visits to London's attractions fell sharply in 2020 and have since recovered at different speeds. We ask how visits in 2025 compare with 2019 for five major sights, and how 2025 visits differ by admission type, using ALVA member counts [@alva2025; @alva2019].
 
 # Methods
 
-`data/visits.csv` holds yearly visits for the British Museum, the Natural History Museum
-(South Kensington), Tate Modern, the National Gallery and the Tower of London, 2015–2025,
-from ALVA's yearly tables [@alva2015; @alva2016; @alva2017; @alva2018; @alva2019;
-@alva2020; @alva2021; @alva2022; @alva2023; @alva2024; @alva2025]. For each attraction
-and year we compute an index, visits divided by the same attraction's 2019 visits, times
-100; 2019 is the last full year before the pandemic. `data/attractions.csv` lists the ten
-London members with the most visits in 2025 [@alva2025] with ALVA's admission code; we
-sum visits by admission type. ALVA counts only its members, so these attractions are a
-description, not a sample of all London sights. 2020–2021 are pandemic years, and from 2024
-the Natural History Museum count includes its reopened gardens.
+The unit of analysis is an attraction. Visits are annual counts reported by ALVA for its member attractions only, from `data/visits.csv` (2019 and 2025) and `data/attractions.csv` (2025). We compute the ratio of 2025 to 2019 visits per attraction and group the ten attractions in 2025 by admission type as recorded in the data. Counts are not adjusted for changes in what each site counts (see the `note` column).
 
 # Results
 
-## Loss and recovery
-
-The five attractions' combined visits were lowest in `{python} low_year`, at
-`{python} low_share` of 2019; in 2025 they reached `{python} recovery_total` of 2019
-(@fig-index).
+Across the five sights the 2025 total is `{python} f"{tot25:,}"` visits against `{python} f"{tot19:,}"` in 2019, a ratio of `{python} f"{tot25/tot19:.2f}"` [@alva2025; @alva2019]. The lowest ratio is `{python} f"{ratio.iloc[0]:.2f}"` (`{python} ratio.index[0]`) and the highest is `{python} f"{ratio.iloc[-1]:.2f}"` (`{python} ratio.index[-1]`) (@fig-recovery).
 
 ```{python}
-#| label: fig-index
-#| fig-cap: "Visits as a percentage of each attraction's 2019 visits, 2015–2025 (ALVA)."
-#| fig-alt: "Line chart of five attractions' visits relative to 2019: all fall to about 15 to 25 percent in 2020 and 2021 and recover by 2025, the National Gallery least."
-import matplotlib.pyplot as plt
-
-ax = index_2019.plot(figsize=(7, 3.6), marker="o")
-ax.axhline(100, color="grey", linewidth=0.8)
-ax.set_ylabel("% of 2019 visits")
-ax.set_xlabel("")
-ax.legend(fontsize=8, frameon=False)
+#| label: fig-recovery
+#| echo: false
+#| fig-cap: "Visits in 2025 as a share of visits in 2019, five London attractions (ALVA member counts)."
+#| fig-alt: "Horizontal bar chart of the ratio of 2025 to 2019 visits for five London attractions."
+fig, ax = plt.subplots(figsize=(6, 3))
+ax.barh(ratio.index, ratio.values)
+ax.axvline(1, color="black", lw=1)
+ax.set_xlabel("Visits 2025 / visits 2019")
 plt.tight_layout()
 plt.show()
 ```
 
-## Admission type
-
-`{python} n_free` of the ten most visited London ALVA member attractions in 2025 have free
-general admission; together they drew `{python} free_share` of the ten's visits
-(@tbl-admission).
+By admission type in 2025 [@alva2025], the ten attractions split as follows (@tbl-admission).
 
 ```{python}
 #| label: tbl-admission
-#| tbl-cap: "Ten most visited London ALVA member attractions in 2025, by admission type."
+#| echo: false
+#| tbl-cap: "Attractions and visits in 2025 by admission type (ALVA member attractions)."
 from IPython.display import Markdown
-
-tbl = by_admission.reset_index()
-tbl["visits"] = tbl["visits"].map("{:,}".format)
-Markdown(tbl.to_markdown(index=False))
+g = grp.reset_index()
+Markdown("| Admission | Attractions | Visits 2025 |\n|:--|--:|--:|\n" + "\n".join(f"| {r.group} | {r['count']} | {int(r['sum']):,} |" for _, r in g.iterrows()))
 ```
 
 # Conclusions
 
-By 2025 visits to these five attractions had largely, but not uniformly, recovered from
-the pandemic. Free admission dominates London's most visited ALVA member attractions.
-These are descriptive counts of ALVA members only.
-
-# References {.unnumbered}
+Visits in 2025 compare with 2019 at the ratios above, and `{python} f"{grp.loc['Free','sum']/grp['sum'].sum():.0%}"` of the 2025 visits to the ten attractions were to attractions with free general admission. These are descriptive counts for ALVA members; they do not show why the ratios differ.

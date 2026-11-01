@@ -1,28 +1,38 @@
 ---
 title: "Visit London"
-subtitle: "Five sights to start with"
 format:
   typst:
     papersize: a5
     margin:
-      x: 1.4cm
+      x: 1.2cm
       y: 1.2cm
-    fontsize: 10pt
-execute:
-  echo: false
 ---
 
-![Big Ben in the sun. Photo: John Dillenbeck, CC0, via Wikimedia Commons](images/big-ben.jpg){height=6.5cm fig-alt="Big Ben's clock tower and the Palace of Westminster against a blue sky."}
+```{python}
+#| echo: false
+import pandas as pd
 
-| Sight | Price band | Nearest tube |
-|---|---|---|
-| British Museum | Free | Tottenham Court Road |
-| Natural History Museum | Free | South Kensington |
-| Tate Modern | Free | Southwark |
-| National Gallery | Free | Charing Cross |
-| Tower of London | Paid | Tower Hill |
+sights = pd.read_csv("data/sights.csv")
+wide = sights.pivot(index="sight", columns="fact", values="value")
+order = ["British Museum", "Natural History Museum", "Tate Modern", "National Gallery", "Tower of London"]
+wide = wide.loc[order]
+```
 
-"Free" means free general admission; some special exhibitions charge.
+![Elizabeth Tower (Big Ben) against the sky. Photo: John Dillenbeck, CC0, via Wikimedia Commons.](images/big-ben.jpg){width=35% fig-alt="The clock tower of the Palace of Westminster, known as Big Ben, seen against the sky."}
 
-> **Tip from a local:** many of London's big museums have free general admission. Booking a
-> free timed ticket online can save you time in the queue.
+## Five sights to start with
+
+```{python}
+#| echo: false
+#| output: asis
+for sight, r in wide.iterrows():
+    print(f"- **{sight}**: {r['price_band']}, nearest tube {r['nearest_tube']}")
+```
+
+## Tip from a local
+
+> Walk along the Thames at sunset: the views from the South Bank are free and unforgettable.
+
+::: {.content-visible when-format="typst"}
+Details and sources: `data/sights.csv`.
+:::

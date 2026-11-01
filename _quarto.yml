@@ -4,36 +4,27 @@ project:
     - index.qmd
     - london.qmd
     - london-dashboard.qmd
-    - london-email.qmd
-    - london-flyer.qmd
-    - london-social.qmd
     - london-whitepaper.qmd
 
 website:
   title: "Visit London"
   navbar:
     left:
-      - text: Guide
+      - text: "Guide"
         href: london.qmd
-      - text: Dashboard
+      - text: "Dashboard"
         href: london-dashboard.qmd
-      - text: Downloads
+      - text: "Downloads"
         menu:
-          - text: "Guide (Word)"
+          - text: "Word (docx)"
             href: london.docx
-          - text: "Guide (PDF)"
+          - text: "PDF"
             href: london.pdf
-          - text: "Guide (PowerPoint)"
+          - text: "PowerPoint (pptx)"
             href: london.pptx
-          - text: "Guide (ePub)"
+          - text: "EPUB"
             href: london.epub
-          - text: "Guide (slides)"
+          - text: "Slides"
             href: london-slides.html
-          - text: "Partner brief (Word)"
-            href: london-email.docx
-          - text: "Flyer (A5 PDF)"
-            href: london-flyer.pdf
-          - text: "Social ad (PDF)"
-            href: london-social.pdf
           - text: "White paper (PDF)"
             href: london-whitepaper.pdf

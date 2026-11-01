@@ -1,20 +1,19 @@
-# Covering email for the partner brief
-
-Copy the text below into your email; attach `london-email.docx`.
+Covering email for the partner brief:
 
 ```text
 Subject: Visit London partner brief
 
 Dear partner,
 
-Please find attached our latest Visit London partner brief. It summarises last year's
-visits to London's most visited attractions, five sights to recommend to your guests,
-and how to get around the city, with sources for every figure.
+Please find attached our Visit London partner brief (london-email.docx). It
+sets out last year's visitor figures for London's leading attractions, our
+five suggested sights with links to their official pages, and practical
+information on getting around the city. Every figure in the brief comes from
+a cited source file, listed at the end of the document.
 
-Feel free to share it with your team. If you have questions or would like printed
-flyers for your front desk, just reply to this email.
+We would be glad to hear how you plan to use it, and we are happy to adapt it
+for your audience.
 
 Kind regards,
-
 London Tourism Office
 ```
